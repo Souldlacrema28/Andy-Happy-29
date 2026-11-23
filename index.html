@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0f">
+<meta name="robots" content="noindex, nofollow">
+<title>Para Andy 💛</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,600;1,500&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- ============ ESCENA 1: COLLAGE + VÍDEO ============ -->
+<section id="s1">
+  <div id="collage" aria-hidden="true"></div>
+  <div class="shade"></div>
+
+  <div id="hero">
+    <p class="kicker">Feliz cumpleaños</p>
+    <h1 id="names"><span class="on">Andy</span><span>mi vida</span><span>Pipiola</span></h1>
+    <p class="sub">Tengo algo para ti</p>
+    <button id="playBtn" class="beat" type="button"><span class="tri">▶</span> Reprodúceme</button>
+  </div>
+
+  <div id="stage" class="hidden">
+    <video id="vid" src="assets/video.mp4" poster="assets/poster.jpg" playsinline webkit-playsinline preload="auto"></video>
+    <div id="pauseMark">❚❚</div>
+  </div>
+
+  <div id="swipe" class="hidden" aria-live="polite">
+    <span>desliza hacia abajo</span>
+    <i></i>
+  </div>
+</section>
+
+<!-- ============ ESCENA 2: CHINA ============ -->
+<section id="s2">
+  <div id="sky"></div>
+  <canvas id="petals"></canvas>
+
+  <!-- paso A: la pagoda -->
+  <div id="stepA" class="step">
+    <div id="vertical" aria-hidden="true">我<br>爱<br>你</div>
+    <div id="lanterns" aria-hidden="true"></div>
+    <svg id="pagoda" viewBox="0 0 400 560" aria-hidden="true"></svg>
+    <div id="ctaA" class="cta hidden">
+      <p class="zh">生日快乐</p>
+      <p class="es">Esto no se ha acabado aquí…</p>
+      <button id="pressBtn" class="beat gold" type="button">Pulsa aquí</button>
+    </div>
+  </div>
+
+  <!-- paso B: el regalo -->
+  <div id="stepB" class="step hidden">
+    <p id="giftTitle" class="es">Esto es para ti, mi vida</p>
+    <div id="giftWrap">
+      <svg id="gift" viewBox="0 0 300 300" aria-label="Regalo envuelto">
+        <defs>
+          <pattern id="lat" width="22" height="22" patternUnits="userSpaceOnUse">
+            <path d="M0 11H22M11 0V22" stroke="#f2c14e" stroke-opacity=".28" stroke-width="1.2"/>
+            <circle cx="11" cy="11" r="3" fill="none" stroke="#f2c14e" stroke-opacity=".35"/>
+          </pattern>
+          <linearGradient id="redg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#d1342f"/><stop offset="1" stop-color="#8f1a1d"/>
+          </linearGradient>
+          <linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#d4961f"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="150" cy="282" rx="105" ry="12" fill="#000" opacity=".25"/>
+        <g id="box">
+          <rect x="45" y="140" width="210" height="135" rx="6" fill="url(#redg)"/>
+          <rect x="45" y="140" width="210" height="135" rx="6" fill="url(#lat)"/>
+          <rect x="132" y="140" width="36" height="135" fill="url(#goldg)"/>
+          <text x="150" y="224" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="900" font-size="46" fill="#7d1114" opacity=".9">福</text>
+          <rect x="45" y="262" width="210" height="13" fill="#7d1114" opacity=".35"/>
+        </g>
+        <g id="lid">
+          <rect x="34" y="104" width="232" height="44" rx="6" fill="url(#redg)"/>
+          <rect x="34" y="104" width="232" height="44" rx="6" fill="url(#lat)"/>
+          <rect x="132" y="104" width="36" height="44" fill="url(#goldg)"/>
+          <!-- nudo chino -->
+          <g transform="translate(150 98)">
+            <path d="M0 0 C-40 -46 -58 -10 -22 -2 C-4 2 0 0 0 0 Z" fill="url(#goldg)" stroke="#9c6a10" stroke-width="2"/>
+            <path d="M0 0 C40 -46 58 -10 22 -2 C4 2 0 0 0 0 Z" fill="url(#goldg)" stroke="#9c6a10" stroke-width="2"/>
+            <path d="M-6 6 L-26 46 L-12 42 L-2 14 Z" fill="url(#goldg)" stroke="#9c6a10" stroke-width="2"/>
+            <path d="M6 6 L26 46 L12 42 L2 14 Z" fill="url(#goldg)" stroke="#9c6a10" stroke-width="2"/>
+            <circle r="11" fill="#e8b23a" stroke="#9c6a10" stroke-width="2"/>
+            <circle r="4" fill="#9c6a10"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <button id="openBtn" class="beat gold" type="button">Pulsa para abrir</button>
+
+    <!-- vale -->
+    <article id="voucher" class="hidden" aria-live="polite">
+      <div class="v-top">
+        <span class="stamp">福</span>
+        <p class="v-small">VALE POR</p>
+        <h2>Un viaje<br>a <b>China</b></h2>
+        <p class="zh2">去中国旅行 · 我们俩</p>
+      </div>
+      <div class="v-body">
+        <p>Para ti, Andy.<br>El viaje inolvidable de los dos.</p>
+        <p class="v-note">Canjeable cuando tú quieras… y para toda la vida.</p>
+        <p class="sign">Con todo mi amor,<br><span id="signName">Pablo</span></p>
+      </div>
+      <button id="again" type="button">♪ otra vez 我爱你</button>
+    </article>
+  </div>
+  <canvas id="confetti"></canvas>
+</section>
+
+<audio id="aNote" src="assets/audio/notification.mp3" preload="auto"></audio>
+<audio id="aFlute" src="assets/audio/flute.mp3" preload="auto" loop></audio>
+<audio id="aVoice" src="assets/audio/voz-china.mp3" preload="auto"></audio>
+
+<script src="app.js"></script>
+</body>
+</html>
